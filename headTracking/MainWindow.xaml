@@ -1,0 +1,65 @@
+﻿<Window x:Class="headTracking.MainWindow"
+        Closing="Window_Closing"
+        WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:headTracking"
+        mc:Ignorable="d"
+        Title="PracaInzynierska" Height="1080" Width="1920">
+    <Grid Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="793*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Name="pictureBox" HorizontalAlignment="Left" Height="240" Margin="24,24,0,0" VerticalAlignment="Top" Width="258" x:FieldModifier="public" Grid.Column="1" Panel.ZIndex="100"/>
+        <ComboBox Visibility="Hidden"  Name ="devices" HorizontalAlignment="Left" Margin="81,310,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" RenderTransformOrigin="-3.958,11.158"/>
+        <TextBox Visibility="Hidden" Name="counter" HorizontalAlignment="Left" Margin="81,264,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Panel.ZIndex="100"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="711" Margin="206,254,0,0" VerticalAlignment="Top" Width="1603" Source="pack://siteoforigin:,,,/keyboard.png" Panel.ZIndex="99"/>
+        <Canvas Name="keyboard" Margin="206,254,0,0" Grid.Column="1" Panel.ZIndex="99" Width="1603" Height="711">
+
+        </Canvas>
+        <Grid Name="allLetters" Grid.ColumnSpan="2" >
+            <Button Name="ButtonQ" HorizontalAlignment="Left" Margin="432,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="136" Width="117"/>
+            <Button Name="ButtonW" HorizontalAlignment="Left" Margin="556,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="127"/>
+            <Button Name="ButtonE" HorizontalAlignment="Left" Margin="698,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="121"/>
+            <Button Name="ButtonR" HorizontalAlignment="Left" Margin="833,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="121"/>
+            <Button Name="ButtonT" HorizontalAlignment="Left" Margin="969,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="144" Width="120"/>
+            <Button Name="ButtonY" HorizontalAlignment="Left" Margin="1094,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="144" Width="121"/>
+            <Button Name="ButtonU" HorizontalAlignment="Left" Margin="1232,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="121"/>
+            <Button Name="ButtonI" HorizontalAlignment="Left" Margin="1358,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="129"/>
+            <Button Name="ButtonO" HorizontalAlignment="Left" Margin="1492,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="132"/>
+            <Button Name="ButtonP" HorizontalAlignment="Left" Margin="1639,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="136" Width="105"/>
+
+            <Button Name="ButtonA" HorizontalAlignment="Left" Margin="468,468,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="158" Width="118"/>
+            <Button Name="ButtonS" HorizontalAlignment="Left" Margin="600,481,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="124"/>
+            <Button Name="ButtonD" HorizontalAlignment="Left" Margin="740,481,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="115"/>
+            <Button Name="ButtonF" HorizontalAlignment="Left" Margin="875,481,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="113"/>
+            <Button Name="ButtonG" HorizontalAlignment="Left" Margin="999,480,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="146" Width="122"/>
+            <Button Name="ButtonH" HorizontalAlignment="Left" Margin="1142,481,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="117"/>
+            <Button Name="ButtonJ" HorizontalAlignment="Left" Margin="1273,481,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="120"/>
+            <Button Name="ButtonK" HorizontalAlignment="Left" Margin="1407,481,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="114"/>
+            <Button Name="ButtonL" HorizontalAlignment="Left" Margin="1538,481,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="145" Width="120"/>
+
+            <Button Name="ButtonZ" HorizontalAlignment="Left" Margin="544,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="149" Width="128"/>
+            <Button Name="ButtonX" HorizontalAlignment="Left" Margin="688,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="149" Width="118"/>
+            <Button Name="ButtonC" HorizontalAlignment="Left" Margin="820,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="138" Width="121"/>
+            <Button Name="ButtonV" HorizontalAlignment="Left" Margin="946,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="149" Width="126"/>
+            <Button Name="ButtonB" HorizontalAlignment="Left" Margin="1086,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="149" Width="129"/>
+            <Button Name="ButtonN" HorizontalAlignment="Left" Margin="1220,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="149" Width="129"/>
+            <Button Name="ButtonM" HorizontalAlignment="Left" Margin="1354,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.202,0.829" Height="138" Width="119"/>
+        </Grid>
+        <Canvas Name="ShowPoint" Grid.Column="1" Margin="206,254,0,0" Panel.ZIndex="99">
+
+        </Canvas>
+        <TextBox x:Name="Letters" HorizontalAlignment="Left" Margin="766,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Grid.Column="1" Panel.ZIndex="100" Height="98" FontSize="22"/>
+        <TextBox x:Name="Suggestions" HorizontalAlignment="Left" Margin="1075,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Grid.Column="1" Panel.ZIndex="100" Height="98" FontSize="22"/>
+        <TextBox x:Name="Blinkratio" HorizontalAlignment="Left" Margin="457,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Grid.Column="1" Panel.ZIndex="100" Height="98" FontSize="22" Visibility="Hidden"/>
+        <TextBox x:Name="suggestionOption1" HorizontalAlignment="Left" Margin="421,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Grid.Column="1" Panel.ZIndex="100" Height="150" FontSize="22" Visibility="Hidden"/>
+        <TextBox x:Name="suggestionOption2" HorizontalAlignment="Left" Margin="752,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Grid.Column="1" Panel.ZIndex="100" Height="150" FontSize="22" Visibility="Hidden"/>
+        <TextBox x:Name="suggestionOption3" HorizontalAlignment="Left" Margin="1075,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Grid.Column="1" Panel.ZIndex="100" Height="150" FontSize="22" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

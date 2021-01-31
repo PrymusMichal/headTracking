@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+	  <NoWarn>$(NoWarn);NU1605</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="keyboard.png" />
+    <None Remove="Resources\keyboard.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="keyboard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\keyboard.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
+    <PackageReference Include="DlibDotNet" Version="19.17.0.20190813" />
+    <PackageReference Include="OpenCvSharp4" Version="4.1.0.20190416" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.1.0.20190416" />
+    <PackageReference Include="WeCantSpell.Hunspell" Version="3.0.1" />
+  </ItemGroup>
+
+</Project>
